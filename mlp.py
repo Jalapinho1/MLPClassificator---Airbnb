@@ -1,5 +1,8 @@
 import keras
 import logging
+import numpy as np
+from keras import metrics
+from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from keras.models import Sequential
@@ -33,20 +36,28 @@ def run_mlp(normalizedDf):
                                   patience=2, verbose=0, mode='auto')
     history = model.fit(X_train, Y_train, validation_split=0.15, epochs=500, verbose=2, callbacks=[earlystopping])
 
-    # evaluate the model
     _, train_acc = model.evaluate(X_train, Y_train, verbose=0)
     _, test_acc = model.evaluate(X_test, Y_test, verbose=0)
+
     print('Train: %.3f, Test: %.3f' % (train_acc, test_acc))
-    # plot loss during training
     pyplot.subplot(211)
     pyplot.title('Loss')
     pyplot.plot(history.history['loss'], label='train')
     pyplot.plot(history.history['val_loss'], label='test')
     pyplot.legend()
-    # plot accuracy during training
+
     pyplot.subplot(212)
     pyplot.title('Accuracy')
     pyplot.plot(history.history['acc'], label='train')
     pyplot.plot(history.history['val_acc'], label='test')
     pyplot.legend()
     pyplot.show()
+
+    predictions = model.predict(X_test)
+    predictions = (predictions > 0.5)
+    predictions = np.argmax(predictions, axis=1)
+    Y_test = Y_test.values
+    Y_test = (Y_test > 0.5)
+    Y_test = np.argmax(Y_test, axis=1)
+    confusion = confusion_matrix(Y_test, predictions)
+    print(confusion)

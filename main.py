@@ -21,7 +21,7 @@ def run_regressor(df):
 
 
 def main():
-    df = pd.read_csv('BarcelonaLong.csv', nrows=2000, sep=";", engine='python')
+    df = pd.read_csv('BarcelonaLong.csv', nrows=5000, sep=";", engine='python')
     print(df.info())
 
     # plt.clf()
@@ -29,6 +29,6 @@ def main():
     # plt.show()
 
     run_classificator(df)
-    run_regressor(df)
+    # run_regressor(df)
 
 main()

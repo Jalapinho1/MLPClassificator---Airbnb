@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fca75281-4d7c-4142-91df-678cd6ebd66e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarcelonaLong.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ZoznamStlpcov.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/barcelona2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/barcelona300.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataloader.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/mlp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlp_tensorflow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/normalizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/normalizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pca.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pca2.py" beforeDir="false" afterPath="$PROJECT_DIR$/pca2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbf.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbf.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +27,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Z2 – povodne neupravene/mlp.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -122,7 +112,8 @@
       <workItem from="1573658440599" duration="11215000" />
       <workItem from="1573741099402" duration="4147000" />
       <workItem from="1573760548939" duration="1653000" />
-      <workItem from="1573768652808" duration="14090000" />
+      <workItem from="1573768652808" duration="14218000" />
+      <workItem from="1573808921184" duration="1217000" />
     </task>
     <servers />
   </component>
@@ -147,8 +138,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mlp.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="30" />
+          <line>60</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mlp.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -158,13 +154,15 @@
         <watch expression="X_test.shape" language="Python" />
         <watch expression="Y_train.shape" language="Python" />
         <watch expression="Y_test" language="Python" />
-        <watch expression="pred" language="Python" />
-        <watch expression="newDf.values[0]" />
+        <watch expression="predictions.shape" language="Python" />
+        <watch expression="predictions.values" language="Python" />
         <watch expression="hist['epoch']" language="Python" />
+        <watch expression="__py_debug_temp_var_1021478010" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Z2$main.coverage" NAME="main Coverage Results" MODIFIED="1573782996655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Z2___Martinez$main.coverage" NAME="main Coverage Results" MODIFIED="1573810229786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
