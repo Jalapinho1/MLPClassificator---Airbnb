@@ -20,7 +20,6 @@ def run_mlp(normalizedDf):
     X_train = scaler.transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # define the keras model
     model = Sequential()
     model.add(Dense(18, input_dim=18, activation='tanh'))
     model.add(Dense(45, activation='tanh'))
@@ -28,10 +27,8 @@ def run_mlp(normalizedDf):
 
     print(model.summary())
 
-    # compile the keras model
     model.compile(SGD(lr=.01), loss='categorical_crossentropy', metrics=['accuracy'])
 
-    # fit model
     earlystopping = keras.callbacks.EarlyStopping(monitor='val_loss',min_delta=0,
                                   patience=2, verbose=0, mode='auto')
     history = model.fit(X_train, Y_train, validation_split=0.15, epochs=500, verbose=2, callbacks=[earlystopping])
